@@ -1,0 +1,20 @@
+{
+    "name": "huanjutang/aliyun-log-php-sdk",
+    "description": "A PHP SDK for Aliyun Log Service",
+    "keywords": ["aliyun", "sls", "log"],
+    "homepage": "http://www.aliyun.com/product/sls/",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nilsir",
+            "homepage": "https://blog.nilsir.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.7"
+    },
+    "autoload": {
+        "files": ["Log_Autoload.php"]
+    }
+}
