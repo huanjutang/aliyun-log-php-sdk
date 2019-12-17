@@ -144,7 +144,7 @@ class RequestCore
 	/**
 	 * The state of SSL certificate verification.
 	 */
-	public $ssl_verification = true;
+	public $ssl_verification = false;
 
 	/**
 	 * The user-defined callback function to call when a stream is read from.
@@ -818,6 +818,8 @@ class RequestCore
 
 		if ($this->response === false)
 		{
+			curl_close($curl_handle);
+			
 			throw new RequestCore_Exception('cURL resource: ' . (string) $curl_handle . '; cURL error: ' . curl_error($curl_handle) . ' (' . curl_errno($curl_handle) . ')');
 		}
 
